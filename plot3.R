@@ -12,7 +12,7 @@ library(dplyr)
 subdata <- filter(data, DateTime >= as.Date("2007-02-01 00:00:00"), DateTime < as.Date("2007-02-03 00:00:00"))
 datetime <- strptime(paste(subdata$Date, subdata$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 
-##Creates pdf file and png 3
+##Creates plot and png 3
 png("plot3.png", width=480, height=480)
 
 plot(datetime, subdata$Sub_metering_1,type="l", xlab="", ylab= "Energy sub metering")

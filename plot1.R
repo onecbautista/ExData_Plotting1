@@ -13,7 +13,7 @@ library(dplyr)
 subdata <- filter(data, DateTime >= as.Date("2007-02-01 00:00:00"), DateTime < as.Date("2007-02-03 00:00:00"))
 datetime <- strptime(paste(subdata$Date, subdata$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 
-##Creates pdf file and histogram for png
+##Creates histogram and png
 
 png("plot1.png", width=480, height=480)
 

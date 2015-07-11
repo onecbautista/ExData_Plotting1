@@ -13,7 +13,7 @@ library(dplyr)
 subdata <- filter(data, DateTime >= as.Date("2007-02-01 00:00:00"), DateTime < as.Date("2007-02-03 00:00:00"))
 datetime <- strptime(paste(subdata$Date, subdata$Time, sep=" "), "%d/%m/%Y %H:%M:%S") 
 
-##Creates pdf file and png 2
+##Creates plot and png 2
 png("plot2.png", width=480, height=480)
 
 plot2.R = plot(datetime, subdata$Global_active_power, type="l", xlab="", ylab= "Global Active Power (killowatts)")
